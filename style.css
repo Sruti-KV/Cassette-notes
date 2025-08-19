@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('retrooo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  text-align: center;
+  padding-top: 2rem;
+  color: white;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.controls {
+  margin-top: 1rem;
+}
+
+button {
+  margin: 0.5rem;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.note-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.note {
+  width: 220px;
+  min-height: 170px;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  background-color: #fff8dc;
+  position: relative;
+  animation: flipIn 0.6s ease;
+}
+
+.note div[contenteditable] {
+  color: black;
+  min-height: 80px;
+  outline: none;
+}
+
+.note button {
+  font-size: 0.7rem;
+  margin: 4px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-family: sans-serif;
+}
+.recording {
+  background-color: red;
+  color: white;
+}
+
+
+@keyframes flipIn {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+.speaking {
+  animation: pulse 1s infinite;
+  outline: 3px dashed #000;
+  background-color: #fffacd !important;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}

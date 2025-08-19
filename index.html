@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cassette Notes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="app">
+    <h1>Cassette Notes</h1>
+    <div class="controls">
+      <button id="addNote">➕ Add Note</button>
+      <button id="exportNotes">📤 Export Notes</button>
+      <button id="deleteAll">🗑️ Delete All</button>
+    </div>
+    <div id="noteContainer" class="note-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
